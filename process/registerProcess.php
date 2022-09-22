@@ -43,7 +43,6 @@ or die(mysqli_error($con));
                 window.location = "../page/registerPage.php";
             </script>';
         }
-
     }else{
         echo
         '<script>
