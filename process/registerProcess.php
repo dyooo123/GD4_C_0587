@@ -19,6 +19,18 @@
         VALUES
         ('$email', '$password', '$name', '$phonenum', '$membership')")
     or die(mysqli_error($con)); // perintah mysql yang gagal dijalankan ditangani oleh perintah “or die”
+    $isEmailAlready = "SELECT email from users WHERE email='$email'";
+    $checkEmail = mysqli_query($con, $isEmailAlready);
+
+    if($checkEmail){
+        echo
+        '<script>
+        alert("Email is already taken, Failed to Register!");
+        window.location = "../index.php"
+        </script>';
+
+        return;
+    }
     if($query){
         echo
             '<script>

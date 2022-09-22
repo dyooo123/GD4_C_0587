@@ -8,12 +8,12 @@ die(mysqli_error($con));
     if($queryDelete){
         echo
             '<script>
-            alert("Delete Success"); window.location = "../page/listMoviesPage.php"
+            alert("Delete Movie Success !"); window.location = "../page/listMoviesPage.php"
             </script>';
     }else{
         echo
             '<script>
-            alert("Delete Failed"); window.location = "../page/listMoviesPage.php"
+            alert("Delete Movvie Failed !"); window.location = "../page/listMoviesPage.php"
             </script>'; 
     }
 }else {
