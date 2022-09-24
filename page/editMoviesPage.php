@@ -20,7 +20,8 @@ $synopsisMovies = $data["synopsis"];
     <form action="../process/editMovieProcess.php?id=<?php echo $id; ?>" method="post">
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Name</label>
-            <input class="form-control" id="name" name="name">
+            <input class="form-control" id="name" name="name"
+                value="<?php echo (isset($nameMovies)) ? $nameMovies: ''?>" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Genre</label>
@@ -45,16 +46,19 @@ $synopsisMovies = $data["synopsis"];
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Release</label>
-            <input class="form-control" id="realese" name="realese">
+            <input class="form-control" id="realese" name="realese"
+                value="<?php echo (isset($realeseMovies)) ? $realeseMovies: ''?>" aria-describedby="emailHelp">
         </div>
 
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Season</label>
-            <input class="form-control" id="season" name="season">
+            <input class="form-control" id="season" name="season"
+                value="<?php echo (isset($seasonMovies)) ? $seasonMovies: ''?>" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Synopsis</label>
-            <input class="form-control" id="synopsis" name="synopsis">
+            <input class="form-control" id="synopsis" name="synopsis"
+                value="<?php echo (isset($synopsisMovies)) ? $synopsisMovies: ''?>" aria-describedby="emailHelp">
         </div>
 
         <div class="d-grid gap-2">

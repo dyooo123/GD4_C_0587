@@ -8,7 +8,7 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
     <div class="body d-flex justify-content-between">
         <h4>LIST SERIES</h4>
         <div class="content-menu ">
-            <a href="../page/addMoviePage.php" class="btn btn-primary mb-3">
+            <a href="../page/addSeriesPage.php" class="btn btn-primary mb-3">
                 <svg style="width:20px;height:20px" viewBox="0 0 24 24" class="mb-1 m">
                     <path fill="#fff"
                         d="M17,13H13V17H11V13H7V11H11V7H13V11H17M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
@@ -16,7 +16,6 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
             </a>
         </div>
     </div>
-
     <hr>
     <table class="table ">
         <thead>
@@ -52,10 +51,17 @@ die(mysqli_error($con));
                     <td>'.$data['season'].'</td>
                     <td>'.$data['synopsis'].'</td>
                     <td>
-                    <a href="./editSeriesPage.php?id=' . $data['id'] . '"><i style="color: green" class="fa fa-edit"></i></a>
-                        <a href="../process/deleteSeriesProcess.php?id='.$data['id'].'"
-onClick="return confirm ( \'Are you sure want to delete this 
-data?\')">                          <i style="color: red" class="fa fa-trash fa-2x"></i>
+                    <a href="../page/editSeriesPage.php?id='.$data['id'].'"
+                    onClick="return confirm ( \'Are you sure want to edit this data?\')"> 
+                    <i style="color: green" class="fa fa-edit fa-2x"></i>
+                    </a>
+
+
+                    <a href="../process/deleteSeriesProcess.php?id='.$data['id'].'"
+                    onClick="return confirm ( \'Are you sure want to delete this data?\')"> 
+                    <i style="color: red" class="fa fa-trash fa-2x"></i>
+                    </a>
+                
                         </a>
                     </td>
                 </tr>';
